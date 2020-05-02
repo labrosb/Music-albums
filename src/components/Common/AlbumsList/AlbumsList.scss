@@ -1,0 +1,16 @@
+@import '../../../styles/mixins.scss';
+
+.list {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 2vw;
+  flex-wrap: wrap;
+}
+.altMessage {
+  display: flex;
+  align-items: center;
+  height: calc(60vh - 16px);
+  p {
+    @include text(normal, text);
+  }
+}

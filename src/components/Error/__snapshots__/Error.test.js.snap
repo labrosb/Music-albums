@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error page component Matches snapshot 1`] = `
+<Fragment>
+  <Header
+    title="My Header"
+  />
+  <div
+    className="error-content"
+  >
+    <h2
+      className="error-title"
+    >
+      Error!
+    </h2>
+    <p
+      className="error-text"
+    >
+      Error message
+    </p>
+  </div>
+</Fragment>
+`;
+
+exports[`Error page component Should Mmatch snapshot 1`] = `
+<Fragment>
+  <Header
+    title="My Header"
+  />
+  <div
+    className="error-content"
+  >
+    <h2
+      className="error-title"
+    >
+      Error!
+    </h2>
+    <p
+      className="error-text"
+    >
+      Error message
+    </p>
+  </div>
+</Fragment>
+`;
+
+exports[`Error page component Should match snapshot 1`] = `
+<Fragment>
+  <Header
+    title="My Header"
+  />
+  <div
+    className="error-content"
+  >
+    <h2
+      className="error-title"
+    >
+      Error!
+    </h2>
+    <p
+      className="error-text"
+    >
+      Error message
+    </p>
+  </div>
+</Fragment>
+`;

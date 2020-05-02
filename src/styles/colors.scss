@@ -1,0 +1,15 @@
+$colors: (
+  primary: #004257,
+  secondary: #9d9797,
+  special: #10DC60,
+  favorite: #cf516b,
+  text: #4b5d73,
+  text-dark: #273f5b,
+  error: #e08c8c,
+  fade: #c6c0c0,
+  background: #ffff
+);
+
+@function color($myColor) {
+  @return map-get($colors, $myColor);
+}

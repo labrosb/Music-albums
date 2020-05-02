@@ -1,0 +1,29 @@
+@import '../../../styles/colors.scss';
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  .album-image {
+    width: 290px;
+    border-radius: 6px;
+  }
+  .album-ranking {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    min-width: 30px;
+    margin-top: 5px;
+    padding: 0 6px 4px 0;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: color(text);
+    background-color: color(special);
+    border: 0.5px solid color(text);
+    border-top-left-radius: 6px;
+    border-bottom-right-radius: 30px;
+    position: absolute;
+    top: -6px;
+    left: 0px;
+  }
+}

@@ -1,0 +1,21 @@
+@import '../../styles/mixins.scss';
+
+.content-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 16px 20px;
+}
+.rights-text {
+  @include text(tiny, text-dark);
+  font-size: 11px;
+  padding: 0 20px;
+  margin: auto;
+  text-align: center;
+}
+
+@media (max-width: 380px) {
+  .content-row {
+    padding: 16px 0;
+  }
+}

@@ -1,0 +1,83 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/mixins.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  padding: 0 78px;
+  color: color(primary-contrast);
+  background-color: color(primary);
+  .back-button {
+    cursor: pointer;
+  }
+  .icon {
+    font-size: 20px;
+    color: color(background);
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    padding-left: 200px;
+    margin: auto;
+    .title-label {
+      @include big-label(background, center)
+    }
+    .icon {
+      font-size: 18px;
+      margin-bottom: 8px;
+      margin-left: 10px;
+    }
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 190px;
+    .route {
+      @include text(normal, background);
+      cursor: pointer;
+    }
+    .route.active::before {
+      content: "➟ ";
+      line-height: 0;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    justify-content: space-between;
+    padding: 0 7%;
+    .title {
+      padding-left: 0;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    padding: 0 5%;
+    .icon {
+      margin-left: 7px;
+      font-size: 14px;
+    }
+    .title {
+      .title-label {
+        @include med-label(background, center)
+      }
+      .icon {
+        margin-bottom: 7px;
+        margin-left: 7px;
+        font-size: 14px;
+      }
+    }
+    .menu {
+      width: 160px;
+      .route {
+        @include text(small, background);
+      }
+    }
+  }
+}

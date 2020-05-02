@@ -1,0 +1,48 @@
+@import './colors.scss';
+@import './fonts.scss';
+
+@mixin text-basic($color) {
+  @if ($color and color($color)) {
+    color: color($color);
+  } @else {
+    color: color(text);
+  }
+}
+
+@mixin label-basic($color, $align) {
+  @include text-basic($color);
+  text-transform: uppercase;
+  @if ($align) {
+    text-align: $align;
+  } @else {
+    text-align: center;
+  }
+}
+
+@mixin text($size, $color) {
+  font-family: font(default);
+
+  @include text-basic($color);
+
+  @if ($size and font-size($size)) {
+    font-size: font-size($size);
+  } @else {
+    font-size: font-size(normal);
+  }
+}
+
+@mixin big-label($color, $align) {
+  @include label-basic($color, $align);
+  text-transform: uppercase;
+  font-family: font(default-medium);
+  font-size: font-size(big);
+  font-weight: 500;
+}
+
+@mixin med-label($color, $align) {
+  @include label-basic($color, $align);
+  text-transform: uppercase;
+  font-family: font(default);
+  font-size: font-size(medium);
+  font-weight: 400;
+}

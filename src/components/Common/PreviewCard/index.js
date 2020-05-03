@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import LazyLoad from 'react-lazyload';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import './PreviewCard.scss';
@@ -28,11 +29,13 @@ function Preview({ toggleFavorite, isFavorite, album }) {
       className="card-container"
       onClick={onCardClick}
     >
-      <img
-        className="card-image"
-        src={album.thumbnail}
-        alt={album.thumbSmall}
-      />
+      <LazyLoad height={200}>
+        <img
+          className="card-image"
+          src={album.thumbnail}
+          alt={album.thumbSmall}
+        />
+      </LazyLoad>
       <div
         className={`card-favorite ${isFavorite ? 'active' : ''}`}
         onClick={onFavoriteClick}

@@ -26,7 +26,7 @@ function formatAlbumData(album) {
 export function getAlbumById(id) {
   return (dispatch, getState) => {
     const albums = getState().topAlbums;
-    const myAlbum = albums.find(album => album.id.attributes['im:id'] === id);
+    const myAlbum = albums.find(album => album.id === id);
 
     return myAlbum;
   };

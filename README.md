@@ -1,4 +1,5 @@
-A Single Page Application consuming the itunes API made with React/Redux and SASS
+A Single Page Application consuming the itunes API made with React/Redux and SASS <br/>
+Test it here: https://labrosb.github.io/Music-albums
 
 ## Info
 

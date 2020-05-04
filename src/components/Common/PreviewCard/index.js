@@ -8,13 +8,11 @@ import './PreviewCard.scss';
 
 // Preview Card Component used as list / Catalogue Item
 
-const root = process.env.PUBLIC_URL;
-
 function Preview({ toggleFavorite, isFavorite, album }) {
   const history = useHistory();
   const onCardClick = useCallback(() => {
     history.push({
-      pathname: `${root}/album-page/${album.id}`,
+      pathname: `/album-page/${album.id}`,
       state: album
     });
   }, [album, history]);

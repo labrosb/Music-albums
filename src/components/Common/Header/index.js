@@ -6,17 +6,15 @@ import { faMusic, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 import './Header.scss';
 
-const root = process.env.PUBLIC_URL;
-
 function Header({ title, active, noBackButton }) {
   const history = useHistory();
 
   const redirectTop100 = useCallback(() => {
-    history.push({ pathname: `${root}/top-100` });
+    history.push({ pathname: '/top-100' });
   }, [history]);
 
   const redirectToFavorites = useCallback(() => {
-    history.push({ pathname: `${root}/my-favorites` });
+    history.push({ pathname: '/my-favorites' });
   }, [history]);
 
   const goBack = useCallback(() => {

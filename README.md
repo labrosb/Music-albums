@@ -1,5 +1,12 @@
-A Single Page Application consuming the itunes API made with React/Redux and Sass <br/>
-Test it here: https://labrosb.github.io/Music-albums
+# Music-albums
+
+Try it here: https://labrosb.github.io/Music-albums
+<p>
+  <img src="https://www.labrosb.com/project-thumbs/music-albums.PNG" height="180px" />
+  <img src="https://www.labrosb.com/project-thumbs/music-albums2.PNG" height="180px" />
+</p>
+
+A Single Page Application consuming the itunes API made with React/Redux and Sass. <br/>
 
 ## Info
 
@@ -8,6 +15,7 @@ The App consists of the a top 100 list an album details and a favorites section.
 ### `Functionalities`
 
 * View the list of the trending albums in the US
+* Filter albums
 * View the main details of each albums and navigate to the official itunes page for more
 * Add albums to favorites without creating an account (stored in local memory)
 

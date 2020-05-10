@@ -6,7 +6,7 @@ Try it here: https://labrosb.github.io/Music-albums
   <img src="https://www.labrosb.com/project-thumbs/music-albums2.PNG" height="180px" />
 </p>
 
-A Single Page Application consuming the itunes API made with React/Redux and Sass. <br/>
+A Single Page Application consuming the itunes API made with React/Redux and Sass.
 
 ## Info
 

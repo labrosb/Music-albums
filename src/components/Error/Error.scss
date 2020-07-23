@@ -12,9 +12,11 @@
   background-color: color(secondary);
   border-radius: 12px;
   .error-title {
+    // med-label mixin
     @include med-label(primary-contrast, center);
   }
   .error-text {
+    // text mixin
     @include text(normal, null);
   }
 }

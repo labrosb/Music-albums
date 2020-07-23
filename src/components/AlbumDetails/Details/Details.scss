@@ -1,6 +1,7 @@
 @import '../../../styles/colors.scss';
 @import '../../../styles/mixins.scss';
 
+// container
 .album-details {
   width: 300px;
   margin: 0 16px;
@@ -9,10 +10,12 @@
   border: 0.5px dotted color(secondary);
   border-radius: 6px;
   position: relative;
+  // Paper-like fields
   .details-row {
     display: flex;
     justify-content: space-between;
   }
+  // Image-cover
   .light-cover {
     height: 100%;
     width: 100%;
@@ -22,6 +25,7 @@
     top: 0;
     left: 0;
   }
+  // album-details
   .details-column {
     display: flex;
     flex-direction: column;

@@ -9,7 +9,7 @@ $colors: (
   fade: #c6c0c0,
   background: #ffff
 );
-
+/** Colors mapping function */
 @function color($myColor) {
   @return map-get($colors, $myColor);
 }

@@ -6,9 +6,10 @@ import AlbumsList from './components/TopAlbums';
 import AlbumDetails from './components/AlbumDetails';
 import Favorites from './components/Favorites';
 import './App.scss';
-
-// Using HashRouter to be compatible wigh gh-pages
-
+/**
+ * Project Router wrapped in redux provider
+ * using HashRouter to be compatible wigh gh-pages
+ */
 function App() {
   return (
     <Provider store={store}>

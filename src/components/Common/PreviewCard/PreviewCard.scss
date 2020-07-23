@@ -8,13 +8,13 @@
   cursor: pointer;
   transition: transform 200ms ease-in-out;
   position: relative;
-
+  // Card image
   .card-image {
     width: 100%;
     margin: auto;
     border: 0.5px solid color(fade);
   }
-
+  // Card favorite button icon
   .card-favorite {
     display: flex;
     justify-content: center;
@@ -32,16 +32,17 @@
     transition: opacity 250ms ease-in-out;
     z-index: -1;
   }
+  // Active favorite
   .card-favorite.active {
     background-color: color(favorite);
     border: 1px solid color(favorite);
     opacity: 0.9;
     z-index: 1;
   }
-
+  // Card details
   .inline-elements {
     display: flex;
-
+    // Ranking number
     .card-rank {
       display: flex;
       align-items: center;
@@ -56,12 +57,12 @@
       border: 1px solid color(secondary);
       border-radius: 50%;
     }
-
+    // Card main details
     .card-details {
       box-sizing: border-box;
       padding-left: 8px;
       overflow: hidden;
-
+      // Detail line
       .card-detail {
         margin: 6px 0;
         text-overflow: ellipsis;
@@ -69,9 +70,11 @@
         white-space: nowrap;
       }
       .card-detail.primary {
+        // Text mixin with small size parameter
         @include text(small, text);
       }
       .card-detail.secondary {
+        // Text mixin with tiny size parameter
         @include text(tiny, text);
       }
     }

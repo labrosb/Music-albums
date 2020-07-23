@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import Header from '../Common/Header';
 import loadingSpinner from '../../assets/icons/loading.svg';
 import './Loading.scss';
-
+/**
+ * Loading component
+ * @component
+ * @param {string} header - The title of the header
+ * @param {string} active - The active link / root in the header
+ * @param {boolean} noBackButton - Indicates if header has back button
+ */
 function LoadingContent({ header, active, noBackButton }) {
   return (
     <>

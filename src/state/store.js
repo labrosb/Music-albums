@@ -4,14 +4,16 @@ import storage from 'redux-persist/lib/storage';
 import thunk from 'redux-thunk';
 import reducers from './reducers';
 
+// Basic state configurations
 const config = {
   key: 'root',
   whitelist: ['favorites', 'favoritesMap'],
   storage
 };
-
+// Persist reducers
 const reducer = persistCombineReducers(config, reducers);
 
+// Initialize state
 const initialState = {
   topAlbums: [],
   favorites: [],

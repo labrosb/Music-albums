@@ -1,6 +1,9 @@
 @import './colors.scss';
 @import './fonts.scss';
 
+/** Mixins for different text and label types */
+
+ // General text properties: to be inherited by other mixins
 @mixin text-basic($color) {
   @if ($color and color($color)) {
     color: color($color);
@@ -8,7 +11,7 @@
     color: color(text);
   }
 }
-
+// General label properties: to be inherited by other mixins
 @mixin label-basic($color, $align) {
   @include text-basic($color);
   text-transform: uppercase;
@@ -18,7 +21,7 @@
     text-align: center;
   }
 }
-
+// Explicit mixins for text and label types
 @mixin text($size, $color) {
   font-family: font(default);
 

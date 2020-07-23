@@ -5,20 +5,27 @@ import LazyLoad from 'react-lazyload';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import './PreviewCard.scss';
-
-// Preview Card Component used as list / Catalogue Item
-
+/**
+ * Preview Card Component used as list / Catalogue Item
+ * @component
+ * @param {function} toggleFavorite - Redux: Adds/removes album from the favorites list
+ * @param {boolean} isFavorite - Indicates if the album is in favorites list
+ * @param {object} album - The album's details
+ */
 function Preview({ toggleFavorite, isFavorite, album }) {
   const history = useHistory();
+  /** Function called on card click */
   const onCardClick = useCallback(() => {
+    // Redirects to the album's page
     history.push({
       pathname: `/album-page/${album.id}`,
       state: album
     });
   }, [album, history]);
-
+  /** Function called on favorite button click */
   const onFavoriteClick = useCallback(ev => {
     ev.stopPropagation();
+    // Adds album to favorites or removes if it's already in favorites
     toggleFavorite(isFavorite, album);
   }, [isFavorite, album, toggleFavorite]);
 

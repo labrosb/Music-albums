@@ -3,12 +3,21 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import './Details.scss';
-
+/**
+ * Implementing Details field of Album details
+ * @component
+ * @param {object} albumData - State: The Albums details
+ * @param {function} toggleFavorite - Redux: Adds/removes album from the favorites list
+ * @param {boolean} isFavorite - Indicates if the album is in favorites list
+ */
 function Details({ albumData, toggleFavorite, isFavorite }) {
+  /** Function called on View More button click */
   const onViewMoreClick = useCallback(() => {
+    // Redirects to album's page
     window.location.href = albumData.link;
   }, [albumData.link]);
 
+  /** Function called on favorites button click */
   const onFavoriteClick = useCallback(() => {
     toggleFavorite(isFavorite, albumData);
   }, [albumData, isFavorite, toggleFavorite]);
@@ -63,8 +72,8 @@ function Details({ albumData, toggleFavorite, isFavorite }) {
 
 Details.propTypes = {
   albumData: PropTypes.object,
-  isFavorite: PropTypes.bool,
-  toggleFavorite: PropTypes.func
+  toggleFavorite: PropTypes.func,
+  isFavorite: PropTypes.bool
 };
 
 export default Details;

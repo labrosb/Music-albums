@@ -2,6 +2,10 @@ import Api from '../../utilities/api';
 import * as types from './types';
 import { setError, resetError } from './error';
 
+/**
+ * Simplifies and ads additional properties to the album object
+ * @param {object} album - The retrieved album's details
+ */
 function formatAlbumData(album) {
   // Getting the big image which is not provided by the API
   const getBigThumb = smallImage => (
@@ -22,7 +26,10 @@ function formatAlbumData(album) {
     rank: index + 1
   }));
 }
-
+/**
+* Get album by id from state
+* @param {number} id - The id of the album
+*/
 export function getAlbumById(id) {
   return (dispatch, getState) => {
     const albums = getState().topAlbums;
@@ -40,7 +47,10 @@ export function setTopAlbums(topList) {
     list
   };
 }
-
+/**
+ * Get top albums from API
+ * @param {number} limit - The number of results to be retrieved
+ */
 export function getTopAlbums(limit) {
   return dispatch => {
     // Resets error (only if an error has already taken place)
@@ -51,10 +61,12 @@ export function getTopAlbums(limit) {
         if (res.status === 200 && res.data.feed) {
           dispatch(setTopAlbums(res.data.feed.entry));
         } else {
+          // Set error
           dispatch(setError('albums', 'Failed to retrieve albums.'));
         }
       })
       .catch(() => {
+        // Set error
         dispatch(setError('albums', 'Failed to retrieve albums.'));
       });
   };

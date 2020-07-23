@@ -1,8 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Cover.scss';
-
+/**
+ * Implementing Cover field of Album details
+ * @component
+ * @param {string} thumbnail - The cover image url
+ * @param {number} rank - The album's current rank number
+ */
 function Cover({ thumbnail, rank }) {
+  /** Conditionally renders album's rank */
   const renderRank = () => {
     if (rank) {
       return (

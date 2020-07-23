@@ -11,11 +11,11 @@ $font-sizes: (
   small: 0.88em,
   tiny: 0.75em
 );
-
+/** Fonts mapping function */
 @function font($myfont) {
   @return map-get($fonts, $myfont);
 }
-
+/** Font sizes mapping function */
 @function font-size($size) {
   @return map-get($font-sizes, $size);
 }

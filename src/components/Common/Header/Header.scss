@@ -1,6 +1,7 @@
 @import '../../../styles/colors.scss';
 @import '../../../styles/mixins.scss';
 
+/* Header container */
 .header {
   display: flex;
   align-items: center;
@@ -12,24 +13,29 @@
   .back-button {
     cursor: pointer;
   }
+  /* The headers back icon */
   .icon {
     font-size: 20px;
     color: color(background);
   }
+  /* Header's title container */
   .title {
     display: flex;
     align-items: center;
     padding-left: 200px;
     margin: auto;
+    /* Header's title */
     .title-label {
       @include big-label(background, center)
     }
+    /* Header's title icon*/
     .icon {
       font-size: 18px;
       margin-bottom: 8px;
       margin-left: 10px;
     }
   }
+  /* Header's menu roots*/
   .menu {
     display: flex;
     justify-content: space-between;
@@ -45,6 +51,7 @@
   }
 }
 
+/* Media Queries */
 @media (max-width: 900px) {
   .header {
     justify-content: space-between;

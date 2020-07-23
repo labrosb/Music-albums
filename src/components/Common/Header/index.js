@@ -3,24 +3,32 @@ import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-
 import './Header.scss';
-
+/**
+ * App Header component
+ * @component
+ * @param {string} header - The title of the header
+ * @param {string} active - The active link / root in the header
+ * @param {boolean} noBackButton - Indicates if header has back button
+ */
 function Header({ title, active, noBackButton }) {
   const history = useHistory();
-
+  /** Function called on Top 100 link click */
   const redirectTop100 = useCallback(() => {
     history.push({ pathname: '/top-100' });
   }, [history]);
 
+  /** Function called on Favorites link click */
   const redirectToFavorites = useCallback(() => {
     history.push({ pathname: '/my-favorites' });
   }, [history]);
 
+  /** Function called on back arrow click */
   const goBack = useCallback(() => {
     history.goBack();
   }, [history]);
 
+  /** Function conditionally renders back button */
   const renderBackButton = () => {
     if (!noBackButton) {
       return (

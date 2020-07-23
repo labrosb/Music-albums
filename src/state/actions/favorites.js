@@ -1,5 +1,7 @@
 import * as types from './types';
 
+/** Forward to reducer */
+
 function updateFavoriteRanks(favorites) {
   return {
     type: types.UPDATE_FAVORITE_RANKS,
@@ -21,11 +23,14 @@ export function removeFavorite(id) {
   };
 }
 
-// Rankings are constantly change so they need to be updated in the stored favorites
+/**
+ * Rankings are constantly change
+ * so they need to be updated in the stored favorites
+ */
 export function setFavoriteRankings() {
   return (dispatch, getState) => {
     const { topAlbums, favorites } = getState().topAlbums;
-
+    // If top albums are retrieved
     if (topAlbums) {
       favorites.forEach(favorite => {
         const element = topAlbums.findIndex(
@@ -39,12 +44,18 @@ export function setFavoriteRankings() {
     }
   };
 }
-
+/**
+ * Add / remove to favorites list
+ * @param {boolean} isFavorite - Indicate if album is favorite
+ * @param {object} album - The album's details
+ */
 export function toggleFavorite(isFavorite, album) {
   return dispatch => {
     if (!isFavorite) {
+      // If is not favorite: add to favorites
       dispatch(addFavorite(album));
     } else {
+      // If is favorite: remove from favorites
       dispatch(removeFavorite(album.id));
     }
   };
